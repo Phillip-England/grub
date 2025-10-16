@@ -1,0 +1,21 @@
+{
+  "name": "grub",
+  "version": "0.0.1",
+  "main": "./entrypoint.ts",
+  "types": "./entrypoint.ts",
+  "exports": {
+    ".": {
+      "import": "./entrypoint.ts",
+      "types": "./entrypoint.ts"
+    }
+  },
+  "files": [
+    "src"
+  ],
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
