@@ -1,15 +1,24 @@
 # grub
+simple cli apps
 
-To install dependencies:
-
+## Installation
 ```bash
-bun install
+bun add github:phillip-england/grub
 ```
 
-To run:
+## Usage
+```ts
+export let help = new Cmd('help');
+help.setAsDefault();
+help.setOperation(async () => {
+  console.log('welcome to grub!')
+  console.log('the ultimate cli builder!')
+})
 
-```bash
-bun run index.ts
+let cli = new Grub(help)
+try {
+  await cli.run();
+} catch (err: any) {
+  console.error(err.message);
+}
 ```
-
-This project was created using `bun init` in bun v1.3.0. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
